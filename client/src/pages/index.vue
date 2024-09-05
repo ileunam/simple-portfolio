@@ -1,6 +1,7 @@
 <template>
-  <v-container class="px-16" max-width="1000">
+  <v-container class="mt-15" max-width="1000">
     <ResumeTitle/>
+    <ResumeExperience/>
   </v-container>
 </template>
 
