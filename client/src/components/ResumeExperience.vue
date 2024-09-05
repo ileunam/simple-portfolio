@@ -18,10 +18,11 @@ var experienceItems = [
 </script>
 
 <template>
-  <v-card variant="text" prepend-icon="mdi-briefcase-outline">
-    <template v-slot:title>
+  <v-card class="mt-16" variant="text">
+    <v-card-title class="d-flex flex-nowrap align-center">
+      <v-icon class="mr-3">mdi-briefcase-outline</v-icon>
       <span class="text-h5">Experiencia Laboral</span>
-    </template>
+    </v-card-title>
     <v-card-text>
       <v-timeline align="start" density="compact">
         <v-timeline-item

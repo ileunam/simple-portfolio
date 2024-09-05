@@ -2,6 +2,7 @@
   <v-container class="mt-15" max-width="1000">
     <ResumeTitle/>
     <ResumeExperience/>
+    <ResumeAboutMe/>
   </v-container>
 </template>
 

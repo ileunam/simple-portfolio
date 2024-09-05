@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <v-card variant="text" max-width="700">
+  <v-card class="mt-16" variant="text" max-width="700">
     <v-card-title class="pb-0">
       <v-avatar
         image="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
