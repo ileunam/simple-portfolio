@@ -1,13 +1,12 @@
 <template>
   <v-app>
     <v-main>
-      <router-view />
+      <router-view/>
     </v-main>
-
-    <AppFooter />
+    <ResumeToolbar/>
   </v-app>
 </template>
 
 <script setup>
-  //
+//
 </script>
