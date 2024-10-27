@@ -3,7 +3,6 @@
     <v-main>
       <router-view/>
     </v-main>
-    <ResumeToolbar/>
   </v-app>
 </template>
 

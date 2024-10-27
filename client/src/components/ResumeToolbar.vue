@@ -1,5 +1,18 @@
 <script setup>
+import {useGoTo} from "vuetify";
+import {useScrollStore} from "@/stores/scroll";
 
+const goTo = useGoTo();
+const scrollStore = useScrollStore();
+
+function goToRoute(route) {
+  this.goTo(route);
+
+}
+
+function onScroll() {
+  console.log('scrolling')
+}
 </script>
 
 
@@ -8,29 +21,30 @@
     <v-bottom-navigation
       style="position: fixed;width: 60%; left: auto; bottom: 10px;"
       color="primary"
-      active
       grow
       density="compact"
       mode="shift"
       rounded="pill"
+      v-model="scrollStore.currentSection"
     >
-      <v-btn>
-        <v-icon>mdi-history</v-icon>
-
-        <span>Recents</span>
+      <v-btn
+        @click="goToRoute('#resume-title')">
+        <v-icon>mdi-human-greeting</v-icon>
+        <span>Hola!</span>
+      </v-btn>
+      <v-btn
+        @click="goToRoute('#resume-experience')"
+      >
+        <v-icon>mdi-briefcase</v-icon>
+        <span>Experiencia</span>
       </v-btn>
 
-      <v-btn>
-        <v-icon>mdi-heart</v-icon>
+      <v-btn @click="goToRoute('#resume-about-me')">
+        <v-icon>mdi-account</v-icon>
 
-        <span>Favorites</span>
+        <span>Acerca de mi</span>
       </v-btn>
 
-      <v-btn>
-        <v-icon>mdi-map-marker</v-icon>
-
-        <span>Nearby</span>
-      </v-btn>
     </v-bottom-navigation>
   </v-layout>
 </template>
