@@ -1,12 +1,9 @@
 <template>
   <v-container max-width="1000">
-    <v-expand-transition>
-      <ResumeTitle/>
-    </v-expand-transition>
+    <ResumeTitle/>
     <ResumeExperience/>
-    <v-expand-transition>
-      <ResumeAboutMe/>
-    </v-expand-transition>
+    <ResumeSkills/>
+    <ResumeAboutMe/>
     <ResumeToolbar/>
   </v-container>
 </template>
@@ -14,6 +11,7 @@
 <script setup>
 import {onMounted} from 'vue';
 import {useScrollStore} from '@/stores/scroll';
+import ResumeSkills from "@/components/ResumeSkills.vue";
 
 const scrollStore = useScrollStore();
 

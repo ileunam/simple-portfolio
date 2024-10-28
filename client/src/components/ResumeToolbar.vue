@@ -59,6 +59,13 @@ function changeToolbarWidth() {
       </v-btn>
       <v-btn
         size="sm"
+        @click="goToRoute('#resume-skills')"
+      >
+        <v-icon>mdi-code-tags</v-icon>
+        <span>Habilidades</span>
+      </v-btn>
+      <v-btn
+        size="sm"
         @click="goToRoute('#resume-about-me')"
       >
         <v-icon>mdi-account</v-icon>

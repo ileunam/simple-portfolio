@@ -7,8 +7,8 @@ const titleStore = useResumeTitleStore()
 </script>
 
 <template>
-  <section id="resume-title">
-    <v-card class="mt-16" variant="text" max-width="700">
+  <section id="resume-title" class="mt-16">
+    <v-card variant="text" max-width="700">
       <v-card-title class="pb-0">
         <v-avatar
           image="../assets/photo1.png"
