@@ -9,7 +9,7 @@ export const customDarkTheme = {
     'on-surface-variant': '#EEEEEE',
     primary: '#F9B17A',
     'primary-darken-1': '#C17A4F',
-    secondary: '#48A9A6',
+    secondary: '#ffc79c',
     'secondary-darken-1': '#018786',
     error: '#B00020',
     info: '#2196F3',
