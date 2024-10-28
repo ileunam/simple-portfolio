@@ -8,7 +8,7 @@ const toolBarWidthClass = ref('w-25');
 const isToolbarOpen = ref(false);
 
 function goToRoute(route) {
-  this.goTo(route);
+  goTo(route);
 
 }
 
