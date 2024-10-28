@@ -20,9 +20,9 @@ const titleStore = useResumeTitleStore()
       </v-card-title>
 
 
-      <v-card-title class="text-h4 text-wrap">{{ titleStore.titleInfo.title }}</v-card-title>
+      <v-card-title class="text-h4 text-wrap font-weight-bold">{{ titleStore.titleInfo.title }}</v-card-title>
       <v-card-text class="text-h6 text-wrap pb-0">
-        {{ titleStore.titleInfo.subtitle }}
+        <span  v-html="titleStore.titleInfo.subtitle"></span>
       </v-card-text>
       <v-card-actions class="pl-3">
         <v-chip

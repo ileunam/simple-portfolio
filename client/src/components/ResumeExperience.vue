@@ -9,7 +9,7 @@ const experienceStore = useResumeExperienceStore()
     <v-card class="mt-16" variant="text">
       <v-card-title class="d-flex flex-nowrap align-center">
         <v-icon class="mr-3">mdi-briefcase-outline</v-icon>
-        <span class="text-h5">Experiencia Laboral</span>
+        <span class="text-h5 font-weight-bold">Experiencia Laboral</span>
       </v-card-title>
       <v-card-text>
         <v-timeline align="start" density="compact">
@@ -17,24 +17,22 @@ const experienceStore = useResumeExperienceStore()
             v-for="item in experienceStore.experienceInfo"
             :size="item.size"
           >
+            <template v-slot:opposite>
+              Opposite content
+            </template>
             <template v-slot:icon>
               <v-avatar :image="item.dotLogo"></v-avatar>
             </template>
-            <v-card variant="text"
-            >
-              <v-card-title class="pt-0">
-
-                <p class="text-h5">{{ item.title }}</p>
-                <p class="text-h7">{{ item.subtitle }}</p>
-              </v-card-title>
-              <v-card-text class="text-wrap">
-                <ul>
-                  <li class="mt-2 text-justify" v-for="desc in item.description">
-                    <span  v-html="desc"></span>
-                  </li>
-                </ul>
-              </v-card-text>
-            </v-card>
+            <div class="d-flex justify-space-between flex-column flex-sm-row">
+              <p class="text-h5 font-weight-bold">{{ item.title }}</p>
+              <p class="text-h6 font-weight-bold">{{ item.year }}</p>
+            </div>
+            <p class="text-h6 font-weight-bold text-primary">{{ item.subtitle }}</p>
+            <ul>
+              <li class="mt-2 text-justify" v-for="desc in item.description">
+                <span v-html="desc"></span>
+              </li>
+            </ul>
           </v-timeline-item>
         </v-timeline>
       </v-card-text>
