@@ -12,7 +12,7 @@ export const social = [
   },
   {
     title: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/manuel-valenzuela-ramirez/',
+    url: 'https://www.linkedin.com/in/manuelvalenzuelaramirez/',
     icon: 'mdi-linkedin',
     color: '#0077B5'
   },
