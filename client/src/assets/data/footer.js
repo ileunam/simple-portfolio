@@ -1,8 +1,3 @@
-export const title = {
-  title: '¡Hola! Soy Manuel Valenzuela 🖐',
-  subtitle: '<span class="text-primary font-weight-bold">Payments Software Engineer</span>. Actualmente me dedico a desarrollar soluciones innovadoras para el área de Pagos en Haulmer.',
-}
-
 export const social = [
   {
     title: 'Contáctame',
@@ -22,5 +17,10 @@ export const social = [
     icon: 'mdi-github',
     color: '#333'
   },
-
+  {
+    title: 'Instagram',
+    url: 'https://www.instagram.com/leunam_v',
+    icon: 'mdi-instagram',
+    color: '#E1306C'
+  },
 ]
