@@ -2,19 +2,15 @@
 import {defineStore} from 'pinia'
 
 //TODO: refactor this using element index
-const sections = {
-  'resume-title': 0,
-  'resume-experience': 1,
-  'resume-skills': 2,
-  'resume-about-me': 3,
-}
+const sections = ['resume-title', 'resume-experience', 'resume-about-me']
+
 export const useScrollStore = defineStore('scroll', {
   state: () => ({
-    currentSection: sections['resume-title']
+    currentSection: 0
   }),
   actions: {
     setCurrentSection(section) {
-      this.currentSection = sections[section]
+      this.currentSection = sections.indexOf(section)
     }
   }
 })

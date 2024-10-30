@@ -4,8 +4,6 @@ import {useScrollStore} from "@/stores/scroll";
 
 const goTo = useGoTo();
 const scrollStore = useScrollStore();
-const toolBarWidthClass = ref('w-25');
-const isToolbarOpen = ref(false);
 
 function goToRoute(route) {
   goTo(route);
@@ -14,18 +12,6 @@ function goToRoute(route) {
 
 function onScroll() {
   console.log('scrolling')
-}
-
-function changeToolbarWidth() {
-  console.log('changing toolbar width')
-  console.log(toolBarWidthClass.value)
-  if (toolBarWidthClass.value === 'w-25') {
-    toolBarWidthClass.value = 'w-75';
-    isToolbarOpen.value = true;
-  } else {
-    toolBarWidthClass.value = 'w-25';
-    isToolbarOpen.value = false;
-  }
 }
 </script>
 
@@ -40,8 +26,9 @@ function changeToolbarWidth() {
       density="compact"
       mode="shift"
       rounded="pill"
-      :mandatory="isToolbarOpen"
+      mandatory
       v-model="scrollStore.currentSection"
+
     >
       <v-btn
         size="sm"
@@ -56,13 +43,6 @@ function changeToolbarWidth() {
       >
         <v-icon>mdi-briefcase</v-icon>
         <span>Experiencia</span>
-      </v-btn>
-      <v-btn
-        size="sm"
-        @click="goToRoute('#resume-skills')"
-      >
-        <v-icon>mdi-code-tags</v-icon>
-        <span>Habilidades</span>
       </v-btn>
       <v-btn
         size="sm"

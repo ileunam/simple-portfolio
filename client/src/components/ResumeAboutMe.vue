@@ -25,6 +25,7 @@ const aboutMeStore = useResumeAboutMeStore();
           image="../assets/photo2.jpg"
           size="200"
           rounded="0"
+          variant="elevated"
         ></v-avatar>
       </v-card-text>
     </v-card>

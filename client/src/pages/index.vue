@@ -28,8 +28,7 @@ function setupScrollWatcher() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute('id');
-          console.log(`Sección visible: ${id}`); // Para verificar
-          scrollStore.setCurrentSection(id); // Actualiza la sección visible
+          scrollStore.setCurrentSection(id);
         }
       });
     },
