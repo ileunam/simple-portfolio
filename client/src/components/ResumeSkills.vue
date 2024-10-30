@@ -5,7 +5,7 @@ const skillsStore = useResumeSkillsStore()
 </script>
 
 <template>
-  <section id="resume-skills">
+  <section>
     <v-card class="mt-16" variant="text">
       <v-card-title class="d-flex flex-nowrap align-center justify-center">
         <v-icon class="mr-3">mdi-code-tags</v-icon>
@@ -21,7 +21,8 @@ const skillsStore = useResumeSkillsStore()
             :prepend-icon="skill.icon"
           ><span class="font-weight-bold">{{
               skill.title
-            }}</span></v-chip>
+            }}</span>
+          </v-chip>
         </div>
       </v-card-text>
     </v-card>

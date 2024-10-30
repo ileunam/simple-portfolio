@@ -22,22 +22,20 @@ const titleStore = useResumeTitleStore()
 
       <v-card-title class="text-h4 text-wrap font-weight-bold">{{ titleStore.titleInfo.title }}</v-card-title>
       <v-card-text class="text-h6 text-wrap pb-0">
-        <span  v-html="titleStore.titleInfo.subtitle"></span>
+        <span v-html="titleStore.titleInfo.subtitle"></span>
       </v-card-text>
-      <v-card-actions class="pl-3">
+      <v-card-actions class="d-flex flex-wrap justify-center justify-sm-start pl-3 mt-1">
         <v-chip
-          prepend-icon="mdi-email-outline"
-          href="#"
-          color="primary"
-        >
-          Contáctame
-        </v-chip>
-        <v-chip
-          prepend-icon="mdi-linkedin"
-          href="https://www.linkedin.com/in/manuelvalenzuelaramirez/"
-          color="primary"
-        >
-          Linkedin
+          v-for="social in titleStore.titleSocial"
+          class="mr-2"
+          :color="social.color"
+          variant="flat"
+          :prepend-icon="social.icon"
+          :href="social.url"
+          target="_blank"
+        ><span class="font-weight-bold">{{
+            social.title
+          }}</span>
         </v-chip>
       </v-card-actions>
     </v-card>
